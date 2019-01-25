@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button_toast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="click to show toast" />
+
+    <Button
+        android:id="@+id/button_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="finish this activity" />
+
+    <Button
+        android:id="@+id/button_explicit_intent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start a new activity by explicit intent" />
+
+    <Button
+        android:id="@+id/button_implicit_intent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start a new activity by implicit intent" />
+
+    <Button
+        android:id="@+id/button_browser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="open a website with browser" />
+
+    <Button
+        android:id="@+id/button_dial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="open dialog " />
+
+    <Button
+        android:id="@+id/start_normal_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start NormalActivity" />
+    <Button
+        android:id="@+id/start_dialog_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start DialogActivity" />
+
+    <Button
+    android:id="@+id/button_close"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="close this app" />
+
+    <Button
+        android:id="@+id/button_best"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="best way to start an activity" />
+</LinearLayout>
