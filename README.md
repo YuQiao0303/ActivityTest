@@ -3,7 +3,7 @@ project created while reading chapter 2 of "First code line" By Guo Lin
 
 here are some notes while reading this chapter:
 
-#参考资料
+# 参考资料
 [Android Studio 下载](https://developer.android.google.cn/studio/)
 [Android Studio官方文档/教程](https://developer.android.google.cn/training/basics/firstapp/creating-project)
 [《第一行代码》（一本安卓开发教材，适合仅有java基础的新手入门）](http://www.mycodes.net/195/10016.htm)
@@ -14,6 +14,7 @@ Ctrl + O 重写方法
 logd , Tab 自动补全Log.d
 在方法外logt ,Tab 会自动以当前类名生成TAG常量
 # Android四大组件
+
 ||组件|说明|
 |-|-|-|
 1|活动（Activity） |所有Android应用程序的门面， 凡是在应用中你看得到的东西， 都是放在活动中的。|
@@ -44,6 +45,7 @@ logd , Tab 自动补全Log.d
 
 
 # 变量或id：引用&定义
+
 |情况|用法|
 |-|-|
 |XML中引用一个id |@id/id_name |
@@ -52,6 +54,7 @@ logd , Tab 自动补全Log.d
 
 
 # layout的一些属性
+
 |属性|意义|
 |-|-|
 match_parent| 跟父元素一样
@@ -69,6 +72,7 @@ wrap_content| 刚好能包含里面的内容就行
 >在<activity> 标签的内部加入<intent-filter> 标签， 并
 在这个标签里添加<action android:name="android.intent.action.MAIN"/> 和<category android: name="android.intent.category.LAUNCHER" /> 这两句声明即可。
 4. 示例代码如下：
+    
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -92,6 +96,7 @@ wrap_content| 刚好能包含里面的内容就行
 
 </manifest>
 ```
+
 效果如下：
 ![效果图](https://upload-images.jianshu.io/upload_images/15426916-9cfde54f0f6f0b35.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -107,6 +112,7 @@ wrap_content| 刚好能包含里面的内容就行
 
 # 活动的4种状态
 每个活动在其生命周期中最多可能会有四种状态：
+
 ||状态|在返回栈中的位置|是否可见|
 |-|-|-|-|
 1|运行状态|栈顶||
@@ -116,6 +122,7 @@ wrap_content| 刚好能包含里面的内容就行
 
 # 活动的7个回调方法
 Activity类中定义了7个回调方法， 覆盖了活动生命周期的每一个环节：
+
 ||回调方法|说明|
 |-|-|-|
 1|onCreate() |  每个活动中我们都重写了这个方法， 它会在活动**第一次被创建**的时候调用。 你应该在这个方法中完成活动的初始化操作， 比如说**加载布局、 绑定事件**等。|
@@ -148,6 +155,7 @@ Activity类中定义了7个回调方法， 覆盖了活动生命周期的每一�
 
 具体方法是：
 1. 在可能被回收，但需要保存临时数据的activity里加：
+
 ```
 @Override
 protected void onSaveInstanceState(Bundle outState) {
@@ -156,14 +164,18 @@ String tempData = "Something you just typed";
 outState.putString("data_key", tempData);
 }
 ```
+
 2. 在该activity的onCreate()中，加上：
+
 ```
 if (savedInstanceState != null) {
 String tempData = savedInstanceState.getString("data_key");
 Log.d(TAG, tempData);
 }
 ```
+
 # 活动的启动模式
+
 |||
 |-|-|
 |standard |启动一个活动时（startActivity），不管它是否已经在返回栈里，都新建一个该活动的实例(调用onCreate)
@@ -173,6 +185,7 @@ Log.d(TAG, tempData);
 
 # 修改启动模式
 修改AndroidManifest.xml中FirstActivity的launchMode 属性：
+
 ```
 <activity
 android:name=".FirstActivity"
